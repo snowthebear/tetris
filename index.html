@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>FIT2102 A1 2023</title>
+  </head>
+  <body>
+    <h1>Tetris</h1>
+    <style>
+      .key {
+        font-size: 15px;  /* Change the value to make the text smaller or larger */
+        font-weight: bold;
+        line-height: 0.5;
+      }
+      .arrow {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .keytitle{ /* Make the span a block-level element */
+        display: block;
+        font-size: 17px;
+        margin-top: 5px;
+        margin-bottom: 6;
+        line-height: 0;  /* Adjust the bottom margin */
+      }
+    </style>
+    
+    <main id="main" class="flex row">
+      <svg id="svgCanvas">
+        <!-- game over text box -->
+        <g id="gameOver" visibility="hidden">
+          <rect x="26" y="120" fill="white" height="48" width="149"></rect>
+          <text x="36" y="150">Game Over</text>
+        </g>
+      </svg>
+      <div id="sideBar" class="flex col">
+        <svg id="svgPreview"></svg>
+        <div id="info" class="flex col">
+          <div class="text">
+            <span class="left">Level: </span>
+            <span class="right" id="levelText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Score: </span>
+            <span class="right" id="scoreText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Highscore: </span>
+            <span class="right" id="highScoreText">...</span>
+          </div>
+          <div class="text">  
+            <span class="keytitle">---------- Key -----------</span> 
+          </div>
+          <span class="key">R - Restart </span>
+          <span class="key">A - Left  </span>
+          <span class="key">D - Right </span>
+          <span class="key">S - Down </span>
+          <span class="key">Space - Drop </span>
+          <span class="key"><span class="arrow">&larr; </span> Rotate Left </span>
+          <span class="key"><span class="arrow">&rarr; </span> Rotate Right </span>
+        </div>
+          
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
