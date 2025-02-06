@@ -28,10 +28,6 @@ Serve up the App (and ctrl-click the URL that appears in the console)
 - Main html file
 - Contains scaffold of game window and some sample shapes
 
-`test/*.test.ts`
-- If you want to add tests, these go here
-- Uses ![`vitest`](https://vitest.dev/api/)
-
 
 ```
 src/
